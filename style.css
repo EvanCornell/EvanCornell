@@ -32,14 +32,34 @@ nav {
     font-weight: 600;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .nav-links a {
-    margin-left: 1.5rem;
     text-decoration: none;
     color: #2d5a27;
 }
 
 .nav-links a:hover {
     color: #1a3a17;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-left: 0.5rem;
+    padding-left: 1rem;
+    border-left: 1px solid #c8ddc5;
+}
+
+.nav-icons a {
+    display: flex;
+    align-items: center;
+    color: #2d5a27;
 }
 
 /* Sections */
