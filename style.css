@@ -107,6 +107,43 @@ p { color: #444; }
     background: #1a3a17;
 }
 
+/* Skills */
+.skills-group {
+    margin-bottom: 1.8rem;
+}
+
+.skills-group h3 {
+    color: #555;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+}
+
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    width: 60px;
+}
+
+.skill-icon i {
+    font-size: 2rem;
+}
+
+.skill-icon span {
+    font-size: 0.7rem;
+    color: #555;
+    text-align: center;
+}
+
 /* Cards */
 .cards {
     display: flex;
