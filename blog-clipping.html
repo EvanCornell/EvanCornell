@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Science of Clipping — Evan Cornell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <span class="nav-name">Evan Cornell</span>
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#blog">Blog</a>
+            <a href="index.html#contact">Contact</a>
+            <div class="nav-icons">
+                <a href="https://www.linkedin.com/in/evan-cornell-258a202a3/" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.987V9h3.102v1.561h.046c.432-.818 1.487-1.681 3.062-1.681 3.274 0 3.878 2.155 3.878 4.958v6.614zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.554 13.019H3.783V9h3.108v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/EvanCornell?tab=repositories" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://osu.joinhandshake.com/profiles/bg3pqr" target="_blank" aria-label="Handshake">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.75 3.75H5.25A1.5 1.5 0 0 0 3.75 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V5.25a1.5 1.5 0 0 0-1.5-1.5zm-1.5 9.75-2.25 2.25-1.5-1.5-3 3-1.5-1.5 3-3-1.5-1.5 2.25-2.25 1.5 1.5 1.5-1.5 2.25 2.25-1.5 1.5 1.5 1.5-.75.75z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <article class="blog-post">
+        <a href="index.html#blog" class="back-link">← Back</a>
+        <h1>The Science of Clipping</h1>
+
+        <p>The concept of clipping and its dangers are commonplace in the car audio community, but almost no one actually understands why it's bad. And there's a lot of misconceptions about clipping out there. Have you ever wondered why a clipped 500w can be worse than a clean 1000w? Well this should explain why, and it has nothing to do with "DC current". Lots to talk about here, be warned.</p>
+
+        <h2>1. A Clipped Signal is Literally More Powerful — and by a Lot</h2>
+        <p>If our theoretical amplifier can produce a max voltage of 1v then the rms voltage of a sine wave produced by that amplifier would be .707v rms. For a hard clipped signal, it would be 1 volt rms.</p>
+        <p>By ohms law, power is related quadratically to voltage (2x voltage = 4x power). So the difference between 1v and .707v is a factor of sqrt(2), which corresponds to 2x wattage. So given two amplifiers rated by max clean output, the 500w amplifier's hard clipped signal could be the exact same average power as the 1000w amplifier's clean signal! This alone is huge, but unfortunately a clipped signal is much worse than this.</p>
+
+        <h2>2. A Clipped Signal Introduces Harmonics</h2>
+        <p>This is bad but not for the reason most think. It has nothing to do with the fact that the high frequency harmonics cause significant excursion. Excursion has a negligible effect on voice coil thermal dissipation in the short term.</p>
+        <p>No, the real issue is that a speaker does not have a constant impedance curve. Impedance varies with frequency. A speaker's Re is its minimum impedance. Impedance in the subwoofer's operating range is generally higher than Re if the enclosure is designed properly. In a standard ported box, impedance will be low at tuning. Above and below tuning there will be a peak where impedance is high. If you keep going above or below, the impedance will lower until it eventually reaches Re (Assume Le = 0)*.</p>
+        <p>When a clipped signal is symmetrical, it produces odd order harmonics with decreasing intensity. A hard clipped 40hz signal will be made up of about 81% fundamental (40hz), 9% 3rd harmonic (120hz), 3% 5th harmonic (200hz), …, ~1/k² % kth harmonic. This is a rough estimate but fine for demonstration. This distribution of frequency content will vary with clipping intensity. Note these percentages are average power percentages, so they assume a perfectly flat impedance curve across all frequencies.</p>
+        <p>However, because the impedance curve of our subwoofer is not constant, the actual power percentage taken up by harmonics could be much higher. This is significant because it means that a clipped 30hz may be completely different than a clipped 40hz — one being much worse. It also means that not all speakers/subs will handle a clipped signal the same. A sub's ability to handle clipping will vary with enclosure design and its own T/S parameters, and still it will be frequency dependent.</p>
+
+        <h2>A Signal Power Estimate</h2>
+        <p>Let's do a small signal power estimate based on the Xv4 15** at 32hz (clean vs hard clip), based on the power/frequency graph provided by Hornresp.</p>
+        <p>The clean signal will be 2v rms (1 watt into 4ohm). Average power = .58 watts.</p>
+        <p>Now the hard clipped signal. Since rms voltage will be higher by a factor of sqrt(2), we raise input voltage to 2.82v rms:</p>
+        <ul>
+            <li>At the fundamental 32hz: 1.156 watts × 81% = <strong>.93 watts</strong></li>
+            <li>At the 3rd harmonic 96hz: 1.836 watts × 9% = <strong>.165 watts</strong></li>
+            <li>At the 5th harmonic 160hz: 1.92 watts × 3% = <strong>.057 watts</strong></li>
+        </ul>
+        <p>Summing these: <strong>~1.15 watts</strong> — about double the clean signal. And if I had selected 40hz instead of 32hz, we would observe a clipped power delivery much higher than 2x the clean signal.</p>
+
+        <h2>TLDR</h2>
+        <p>Clipping kills drivers because the voice coil has to dissipate significantly more thermal energy than it can handle. A clipped 500w signal can be worse than a 1000w clean signal because clipped harmonics can contribute more relative power than the fundamental frequency. This is all highly dependent on fundamental frequency and enclosure design. T/S parameter variance over stroke and inductance also make this behavior less easily predictable.</p>
+        <p>Hopefully some of this yapping makes sense. Feel free to ask questions.</p>
+
+        <footer class="blog-footnotes">
+            <p>*Le is a parameter related to impedance rise with frequency. Can have a significant effect on impedance where clipped harmonics lie.</p>
+            <p>**Simulated box based on Sundown recommended enclosure.</p>
+        </footer>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 Evan Cornell</p>
+</footer>
+
+</body>
+</html>
